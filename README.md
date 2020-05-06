@@ -6,6 +6,9 @@
 - Nuxt.jsをLambdaにデプロイするテンプレート
 - `npm run deploy:xxx`でデプロイできる
 - Lambda + S3 + API Gatewayまでを自動化しており，継続的にデプロイする場合はCloudFrontの手動設定が必要
+- デプロイ先にはdev, stage, prodの3種類を選べる
+- stageとprodの挙動は同じなのでCloudFrontの設定を使い分けて，ステージ環境と本番環境を切り分けることになる
+- 新たにプロジェクトを更新してデプロイしたい場合は`npm run deploy:xxx`を再度実行すれば良く，`npm run undeploy:xxx`は不要
 
 ## AWSの設定など
 - 公式ドキュメントを参考にawscliをセットアップする
